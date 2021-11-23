@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		E764D732274C881D00A1C462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D731274C881D00A1C462 /* AppDelegate.swift */; };
 		E764D734274C881D00A1C462 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D733274C881D00A1C462 /* ContentView.swift */; };
-		E764D736274C881D00A1C462 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E764D735274C881D00A1C462 /* Experience.rcproject */; };
 		E764D738274C881F00A1C462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E764D737274C881F00A1C462 /* Assets.xcassets */; };
-		E764D73B274C881F00A1C462 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E764D73A274C881F00A1C462 /* Preview Assets.xcassets */; };
+		E7CE2682274CCFB100E9B7FB /* AWSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CE2681274CCFB100E9B7FB /* AWSessionDelegate.swift */; };
+		E7DD971D274CF53E00A03B6E /* AWScoreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD971C274CF53E00A03B6E /* AWScoreEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E764D72E274C881D00A1C462 /* Eco Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco Glance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E764D731274C881D00A1C462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E764D733274C881D00A1C462 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E764D735274C881D00A1C462 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E764D737274C881F00A1C462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E764D73A274C881F00A1C462 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7CE2681274CCFB100E9B7FB /* AWSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSessionDelegate.swift; sourceTree = "<group>"; };
+		E7DD971C274CF53E00A03B6E /* AWScoreEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWScoreEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,19 +55,11 @@
 			children = (
 				E764D731274C881D00A1C462 /* AppDelegate.swift */,
 				E764D733274C881D00A1C462 /* ContentView.swift */,
-				E764D735274C881D00A1C462 /* Experience.rcproject */,
+				E7CE2681274CCFB100E9B7FB /* AWSessionDelegate.swift */,
+				E7DD971C274CF53E00A03B6E /* AWScoreEntity.swift */,
 				E764D737274C881F00A1C462 /* Assets.xcassets */,
-				E764D739274C881F00A1C462 /* Preview Content */,
 			);
 			path = "Eco Glance";
-			sourceTree = "<group>";
-		};
-		E764D739274C881F00A1C462 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E764D73A274C881F00A1C462 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +120,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E764D73B274C881F00A1C462 /* Preview Assets.xcassets in Resources */,
 				E764D738274C881F00A1C462 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +133,8 @@
 			files = (
 				E764D734274C881D00A1C462 /* ContentView.swift in Sources */,
 				E764D732274C881D00A1C462 /* AppDelegate.swift in Sources */,
-				E764D736274C881D00A1C462 /* Experience.rcproject in Sources */,
+				E7CE2682274CCFB100E9B7FB /* AWSessionDelegate.swift in Sources */,
+				E7DD971D274CF53E00A03B6E /* AWScoreEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +262,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Eco Glance/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = Y4HCC4MD29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -301,9 +294,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Eco Glance/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = Y4HCC4MD29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

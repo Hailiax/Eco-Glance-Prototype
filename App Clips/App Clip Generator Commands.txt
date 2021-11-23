@@ -1,0 +1,4 @@
+Command to generate app clip:
+
+AppClipCodeGenerator generate --url "https://alexwing.me/?v=023456789abcde" --index 1 --output ~/Downloads/AppClipCode.svg --logo none
+

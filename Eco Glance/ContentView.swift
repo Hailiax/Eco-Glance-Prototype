@@ -6,7 +6,14 @@
 //
 
 import SwiftUI
+import ARKit
 import RealityKit
+
+// Need to retain a reference to session delegate. Ideally shouldn't be a global variable
+var AWRetainSessionDelegate: ARSessionDelegate?
+
+// Expose the scene to be mutated by the session delegate. Ideally shouldn't be a global variable
+public var AWScene: RealityKit.Scene?
 
 struct ContentView : View {
     var body: some View {
@@ -18,13 +25,26 @@ struct ARViewContainer: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
         
+        // Check for app clip tracking support (needs Apple Neural Engine)
+        if !ARWorldTrackingConfiguration.supportsAppClipCodeTracking {
+            print("ERROR: App clip tracking not supported")
+        }
+        
+        // Create our AR View
         let arView = ARView(frame: .zero)
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        // Enable app clip tracking
+        arView.automaticallyConfigureSession = false
+        let newConfiguration = ARWorldTrackingConfiguration()
+        newConfiguration.appClipCodeTrackingEnabled = true
+        arView.session.run(newConfiguration)
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        // Set our session delegate for app clip processing
+        AWRetainSessionDelegate = AWSessionDelegate()
+        arView.session.delegate = AWRetainSessionDelegate
+        
+        // Save the scene
+        AWScene = arView.scene
         
         return arView
         
@@ -33,11 +53,3 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {}
     
 }
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-#endif
