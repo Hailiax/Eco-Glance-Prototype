@@ -11,7 +11,7 @@
 		E764D734274C881D00A1C462 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764D733274C881D00A1C462 /* ContentView.swift */; };
 		E764D738274C881F00A1C462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E764D737274C881F00A1C462 /* Assets.xcassets */; };
 		E7CE2682274CCFB100E9B7FB /* AWSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CE2681274CCFB100E9B7FB /* AWSessionDelegate.swift */; };
-		E7DD971D274CF53E00A03B6E /* AWScoreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD971C274CF53E00A03B6E /* AWScoreEntity.swift */; };
+		E7DD971D274CF53E00A03B6E /* AWScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD971C274CF53E00A03B6E /* AWScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		E764D733274C881D00A1C462 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E764D737274C881F00A1C462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CE2681274CCFB100E9B7FB /* AWSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSessionDelegate.swift; sourceTree = "<group>"; };
-		E7DD971C274CF53E00A03B6E /* AWScoreEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWScoreEntity.swift; sourceTree = "<group>"; };
+		E7DD971C274CF53E00A03B6E /* AWScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 				E764D731274C881D00A1C462 /* AppDelegate.swift */,
 				E764D733274C881D00A1C462 /* ContentView.swift */,
 				E7CE2681274CCFB100E9B7FB /* AWSessionDelegate.swift */,
-				E7DD971C274CF53E00A03B6E /* AWScoreEntity.swift */,
+				E7DD971C274CF53E00A03B6E /* AWScore.swift */,
 				E764D737274C881F00A1C462 /* Assets.xcassets */,
 			);
 			path = "Eco Glance";
@@ -134,7 +134,7 @@
 				E764D734274C881D00A1C462 /* ContentView.swift in Sources */,
 				E764D732274C881D00A1C462 /* AppDelegate.swift in Sources */,
 				E7CE2682274CCFB100E9B7FB /* AWSessionDelegate.swift in Sources */,
-				E7DD971D274CF53E00A03B6E /* AWScoreEntity.swift in Sources */,
+				E7DD971D274CF53E00A03B6E /* AWScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

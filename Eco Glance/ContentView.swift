@@ -9,11 +9,8 @@ import SwiftUI
 import ARKit
 import RealityKit
 
-// Need to retain a reference to session delegate. Ideally shouldn't be a global variable
-var AWRetainSessionDelegate: ARSessionDelegate?
-
-// Expose the scene to be mutated by the session delegate. Ideally shouldn't be a global variable
-public var AWScene: RealityKit.Scene?
+// Need to retain a reference to session delegate.
+fileprivate var AWRetainSessionDelegate: ARSessionDelegate?
 
 struct ContentView : View {
     var body: some View {
@@ -40,11 +37,8 @@ struct ARViewContainer: UIViewRepresentable {
         arView.session.run(newConfiguration)
         
         // Set our session delegate for app clip processing
-        AWRetainSessionDelegate = AWSessionDelegate()
+        AWRetainSessionDelegate = AWSessionDelegate(arView.scene)
         arView.session.delegate = AWRetainSessionDelegate
-        
-        // Save the scene
-        AWScene = arView.scene
         
         return arView
         
