@@ -9,15 +9,12 @@ import RealityKit
 
 struct AWScoreEntity {
     
-    func createScore(radius: Float) -> ModelEntity {
-        print(radius)
-        return .init(mesh: .generateSphere(radius: radius),
-                     materials: [SimpleMaterial(color: .init(hue: 0.304,
-                                                             saturation: .init((radius - 0.04)/0.07),
-                                                             brightness: 0.8,
-                                                             alpha: 1.0),
-                                                roughness: 1.0,
-                                                isMetallic: false)])
+    func createScore() -> ModelEntity {
+        return .init(mesh: .generateSphere(radius: 1),
+                     materials: [UnlitMaterial(color: .init(hue: 0.304,
+                                                            saturation: 1.0,
+                                                            brightness: 0.8,
+                                                            alpha: 0.0))])
     }
     
 }
